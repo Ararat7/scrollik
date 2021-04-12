@@ -1,0 +1,41 @@
+.scrollik {
+  &-wrapper {
+    display: flex;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  &-container {
+    overflow: auto;
+    flex-grow: 1;
+    height: 100%;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-vTrack {
+    background-color: lavender;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 100%;
+    width: 10px;
+  }
+
+  &-vThumb {
+    background-color: slategrey;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &-trackHidden {
+    display: none;
+  }
+}

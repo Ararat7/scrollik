@@ -6,9 +6,10 @@ import classNames from 'classnames';
 import { useScroll } from '../hooks/useScroll';
 
 import { IScrollikProps, IVValues } from './types';
-import useStyles from './styles';
 import useMutationObserver from '../hooks/useMutationObserver';
 import useWindowResize from '../hooks/useWindowResize';
+
+import './style.scss';
 
 const Scrollik: FC<IScrollikProps> = ({
   className,
@@ -29,8 +30,6 @@ const Scrollik: FC<IScrollikProps> = ({
   const [vTrackH, setVTrackH] = useState(0);
   const [vThumbH, setVThumbH] = useState(0);
   const [vThumbTop, setVThumbTop] = useState(0);
-
-  const classes = useStyles();
 
   const scroll = useScroll({ element: containerRef });
 
@@ -134,11 +133,9 @@ const Scrollik: FC<IScrollikProps> = ({
   }, [turnOffScroll, scrollContent]);
 
   return (
-    <div
-      className={classNames(classes.wrapper, className)}
-    >
+    <div className={classNames('scrollik-wrapper', className)}>
       <div
-        className={classes.container}
+        className="scrollik-container"
         ref={containerRef}
       >
         <div ref={contentRef}>
@@ -147,11 +144,11 @@ const Scrollik: FC<IScrollikProps> = ({
       </div>
       <div
         ref={vTrackRef}
-        className={classNames(classes.vTrack, { [classes.trackHidden]: !vDeltaContent }, vTrackClassName)}
+        className={classNames('scrollik-vTrack', { 'scrollik-trackHidden': !vDeltaContent }, vTrackClassName)}
       >
         <div
           ref={vThumbRef}
-          className={classNames(classes.vThumb, vThumbClassName)}
+          className={classNames('scrollik-vThumb', vThumbClassName)}
           onMouseDown={handleVThumbMouseDown}
         />
       </div>
