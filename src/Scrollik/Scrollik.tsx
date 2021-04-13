@@ -3,11 +3,10 @@ import {
 } from 'react';
 import classNames from 'classnames';
 
-import { useScroll } from '../hooks/useScroll';
-
 import { IScrollikProps, IVValues } from './types';
 import useMutationObserver from '../hooks/useMutationObserver';
 import useWindowResize from '../hooks/useWindowResize';
+import useScroll from '../hooks/useScroll';
 
 import './style.scss';
 

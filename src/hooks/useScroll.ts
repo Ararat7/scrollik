@@ -16,7 +16,7 @@ interface UseScroll {
   element?: RefObject<Element> | Window | null;
 }
 
-export const useScroll = (options?: UseScroll): Scroll => {
+const useScroll = (options?: UseScroll): Scroll => {
   const { element } = useMemo<UseScroll>(
     () => ({
       element: isSSR ? undefined : window,
@@ -95,3 +95,5 @@ export const useScroll = (options?: UseScroll): Scroll => {
 
   return scroll;
 };
+
+export default useScroll;
