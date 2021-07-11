@@ -1,12 +1,14 @@
 # scrollik
 
-###Simple ReactJS custom scrollbar
+### Simple ReactJS custom scrollbar
 
-Use below props to customize scrollbar
+Use below props for customization
+
+`overlay`: absolutely palace thumbs over content
 
 `className`: wrapper className
 
-`vThumbSize`: custom vertical thumb height
+`vThumbSize`: vertical thumb custom height
 
 `vThumbOffset`: vertical thumb top/bottom margins
 
