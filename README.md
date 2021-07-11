@@ -4,7 +4,7 @@
 
 Use below props for customization
 
-`overlay`: absolutely palace thumbs over content
+`overlay`: absolutely place tracks over content
 
 `className`: wrapper className
 
