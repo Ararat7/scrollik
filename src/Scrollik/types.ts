@@ -1,4 +1,5 @@
 export interface IScrollikProps {
+  overlay?: boolean;
   className?: string;
   vThumbSize?: number;
   vThumbOffset?: number;

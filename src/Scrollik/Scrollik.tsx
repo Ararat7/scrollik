@@ -16,6 +16,7 @@ const Scrollik: FC<IScrollikProps> = ({
   vTrackClassName,
   vThumbOffset = 0,
   vThumbSize,
+  overlay = false,
   children,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -143,7 +144,10 @@ const Scrollik: FC<IScrollikProps> = ({
       </div>
       <div
         ref={vTrackRef}
-        className={classNames('scrollik-vTrack', { 'scrollik-trackHidden': !vDeltaContent }, vTrackClassName)}
+        className={classNames('scrollik-vTrack', {
+          'scrollik-trackHidden': !vDeltaContent,
+          'scrollik-trackOverlay': overlay,
+        }, vTrackClassName)}
       >
         <div
           ref={vThumbRef}
