@@ -1,6 +1,6 @@
 {
   "name": "scrollik",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Simple custom scrollbars",
   "main": "./Scrollik/index-cjs.js",
   "browser": "./Scrollik/index.js",
